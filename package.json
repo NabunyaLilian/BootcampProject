@@ -16,7 +16,7 @@
       "\\.(css|scss)$": "<rootDir>/src/styleMock.js"
     },
     "setupFilesAfterEnv": [
-      "<rootDir>/tests/enzyme.config.js"
+      "<rootDir>/enzyme.config.js"
     ]
   },
   "devDependencies": {

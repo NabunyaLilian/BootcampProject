@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import {fetchProduct} from './actions/productsAction'
 import PropTypes from "prop-types";
 import SingleProduct from './SingleProduct';
+import './style/style.css'
 
 export class Products extends Component {
   
@@ -21,6 +22,7 @@ export class Products extends Component {
     const {products} = this.props
     return (
       <div>
+        <h2 className="text-left text">Products</h2>
         <table className="table table-striped table-hover table-responsive-sm|md" >
         <thead>
             <tr>
@@ -30,6 +32,7 @@ export class Products extends Component {
             <th scope="col">Price</th>
             <th scope="col"> Minimum Quantity</th>
             <th scope="col">Category</th>
+            <th scope="col">Options</th>
             </tr>
         </thead>
         <tbody>

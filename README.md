@@ -16,4 +16,4 @@ Store Manager is a web application that helps store owners manage sales and prod
 
 ## Deployment
 
-* Access it using this link https://bootcamp-project.herokuapp.com/
+* Access  the app using this link https://bootcamp-project.herokuapp.com/

@@ -10,6 +10,7 @@ const SingleProduct = ({id,name,quantity,price,minimumQuantity, category}) => {
             <td>{price}</td>
             <td>{minimumQuantity}</td>
             <td>{category}</td>
+            <td><button class="btn btn-outline-primary">Edit</button> &nbsp;&nbsp;&nbsp;&nbsp;<button class="btn btn-outline-danger">Delete</button></td>
         </tr>
     )
 }
