@@ -27,7 +27,6 @@ export class Login extends Component {
   };
 
   componentWillReceiveProps(nextProps) {
-    console.log(nextProps);
     this.setState({ loading: false });
     if (nextProps.loginerror.data) {
       this.setState({ errors: "Wrong email or password" });

@@ -13,12 +13,14 @@ export class Signup extends Component {
       Password: "",
       FirstName: "",
       isAdmin: "",
+      loading: false
     };
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleSubmit(event){
     event.preventDefault();
+    this.setState({ loading: true });
     const { Username, Password, FirstName, isAdmin } = this.state;
     console.log(Username, Password, FirstName, isAdmin);
     this.props.signup(Username, Password, FirstName, isAdmin);
@@ -28,7 +30,17 @@ export class Signup extends Component {
     this.setState({ [event.target.name]: event.target.value });
   }
 
+  componentWillReceiveProps(nextProps) {
+    console.log(nextProps);
+    this.setState({ loading: false });
+    this.setState({ success: nextProps.loginsuccess.Message});
+    this.setState({ error: nextProps.loginerror.data.Error});
+    console.log(nextProps)
+
+  }
+
   render() {
+    const { success, loading, error } = this.state;
     return (
       <div className="container">
         <div className="row">
@@ -59,17 +71,26 @@ export class Signup extends Component {
                 icon="fas fa-unlock-alt"
                 changed = {this.changeHandler}
               />  
-            <select class="custom-select" onChange={this.changeHandler} name="isAdmin">
+            <select className="custom-select" onChange={this.changeHandler} name="isAdmin">
                 <option>isAdmin</option>
                 <option value="True">True</option>
                 <option value="False">False</option>
             </select>
-              <input
-                type="submit"
-                className="btn btn-block mt-4 btn-submit"
-                value="Sign in"
-              />
-            </form>
+            <button type="submit" className="btn btn-block mt-4 btn-submit" >
+                {loading ? <i className="fas fa-circle-notch spin spinner-border spinner-border-sm"/> : "Sign Up"}
+              </button>
+            </form><br/>
+            <div>
+           { 
+              success && (  
+              (success === "New account created") ?
+              <div className="alert alert-success">{success}</div> : 
+              <div className="alert alert-warning">{success}</div>
+             )
+            }
+
+            {error ? <div className="alert alert-danger">{error}</div> : ""}    
+            </div>
           </div>
         </div>
       </div>
