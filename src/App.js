@@ -9,7 +9,7 @@ import Products from "./components/products/products";
 import Signup from "./components/auth/signup";
 
 
-class App extends Component {
+export class App extends Component {
   render() {
     return (
       <Router>
@@ -17,9 +17,9 @@ class App extends Component {
           <Navbar />
           <div className="container">
             {/* <Route exact path="/" component={Landing} /> */}
-            <Route path="/users/login" component={Login} />
+            <Route exact path="/" component={Login} />
             <Route path="/users/signup" component={Signup} />
-            <Route path="/products" component={Products} />
+            <Route exact path="/products" component={Products} />
           </div>
         </div>
       </Router>

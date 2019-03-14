@@ -43,5 +43,5 @@ export const login = (Username, Password) => (dispatch) => {
       dispatch(loginsuccess(decodedData));
       window.location.href= '/products'
     })
-    .catch(error => dispatch(loginfail(error.response.data.error)));
+    .catch(error => dispatch(loginfail(error.response)));
 };

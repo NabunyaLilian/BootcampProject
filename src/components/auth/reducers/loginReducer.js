@@ -2,7 +2,7 @@ import actionTypes from "../actions/actionTypes"
 
 export const initialState = {
     user: {},
-    error: null,
+    error: {},
 };
 
 const loginReducer = (state = initialState, action) => {
