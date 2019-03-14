@@ -5,7 +5,7 @@ import actionTypes from "../actions/actionTypes"
 describe("loginReducer", () => {
     const initialState = {
         user: {},
-        error: null
+        error: {}
     };
 
     

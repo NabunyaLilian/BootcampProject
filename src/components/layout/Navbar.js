@@ -11,21 +11,10 @@ class Navbar extends Component {
     return (
       <nav className="navbar navbar-expand-sm navbar-dark bg-dark mb-5">
         <div className="container">
+        <Link className="navbar-brand" to="/">
+          <h3>StoreManager</h3>
+        </Link>
           <div className="collapse navbar-collapse">
-            <ul className="navbar-nav ml-auto">
-              <li className="nav-item">
-                <Link to="/users/login" className="nav-link">
-                  Sign-in
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link to="/users/signup" className="nav-link">
-                  <button type="button" className="btn btn-sm btn-light">
-                    Get started
-                  </button>
-                </Link>
-              </li>
-            </ul>
           </div>
         </div>
       </nav>

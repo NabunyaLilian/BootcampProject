@@ -12,7 +12,7 @@ export class Signup extends Component {
       Username: "",
       Password: "",
       FirstName: "",
-      isAdmin: ""
+      isAdmin: "",
     };
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -20,6 +20,7 @@ export class Signup extends Component {
   handleSubmit(event){
     event.preventDefault();
     const { Username, Password, FirstName, isAdmin } = this.state;
+    console.log(Username, Password, FirstName, isAdmin);
     this.props.signup(Username, Password, FirstName, isAdmin);
   }
   changeHandler = (event) => {
@@ -58,8 +59,8 @@ export class Signup extends Component {
                 icon="fas fa-envelope"
                 changed = {this.changeHandler}
               />  
-            <select class="custom-select">
-                <option selected>isAdmin</option>
+            <select class="custom-select" onChange={this.changeHandler} name="isAdmin">
+                <option>isAdmin</option>
                 <option value="True">True</option>
                 <option value="False">False</option>
             </select>
