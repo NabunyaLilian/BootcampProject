@@ -31,11 +31,8 @@ export class Signup extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    console.log(nextProps);
     this.setState({ loading: false });
     this.setState({ success: nextProps.loginsuccess.Message});
-    this.setState({ error: nextProps.loginerror.data.Error});
-    console.log(nextProps)
 
   }
 
@@ -89,7 +86,6 @@ export class Signup extends Component {
              )
             }
 
-            {error ? <div className="alert alert-danger">{error}</div> : ""}    
             </div>
           </div>
         </div>

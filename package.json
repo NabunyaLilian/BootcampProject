@@ -1,5 +1,5 @@
 {
-  "name": "Shopers_store_manager",
+  "name": "store_manager",
   "version": "1.0.0",
   "main": "webpack.config.js",
   "scripts": {
@@ -44,15 +44,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/araaliFarooq/shopper_store_react_redux.git"
+    "url": "git+https://github.com/NabunyaLilian/BootcampProject.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/araaliFarooq/shopper_store_react_redux/issues"
+    "url": "https://github.com/NabunyaLilian/BootcampProject/issues"
   },
-  "homepage": "https://github.com/araaliFarooq/shopper_store_react_redux#readme",
+  "homepage": "https://github.com/NabunyaLilian/BootcampProject#readme",
   "dependencies": {
     "axios": "^0.18.0",
     "css-loader": "^2.1.0",
