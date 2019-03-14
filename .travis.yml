@@ -1,0 +1,31 @@
+language: node_js
+
+node_js:
+  - "10"
+
+cache:
+  directories:
+    - node_modules
+
+env:
+  matrix:
+  - REACT=16.7
+
+before_script:
+  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+  - chmod +x ./cc-test-reporter
+  - ./cc-test-reporter before-build
+
+script:
+  - rm -f package-lock.json && npm install
+  - npm install jest@latest
+  - npm run build
+  - npm run test -- -u --coverage
+
+after_script:
+  - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
+
+addons:
+  code_climate:
+    repo_token:
+      secure: "IcGWszVC4Y9VBOs4HtM/siQ4LS1HEBpoTegPdQMjaQNPUwv4yH01rAFk/P7KeDc8QjHKjOooEjOtrIi56hyy/p2gSTD81XTvFpY5jZ92Zzvp7sQsmzj+gbsexMcr7JLSbTD/8HuTDOVPRjMApL6shDSaT6fGdhaVW+AeDScRuV0C/BPytirUJZcA31LuBHz156ooPHPh3FVdb33iZczprbCz8+9JGP2Txf0tw45DFP1gAi+ZLzF6JT4FM8ntuY+peUKPeXse6/fxk6R7fxuy1QG+6SsxD58kLtqh3Gu/nWjv4gl0fN1EboPhQUFCViQYPTH1NA7/0uy6bu7khAq41s4RDB9su7NHfJc5NIIm98kV3A6+unHM1Dst1uCDatPCrrE1oB0FjTDGY2EuCIKNFlgJYh4FY0ukzUoavgzc6FkRnKbTEcOOpUSUadScfuG9kpPadKvdUtZBcYgfrmGRNwHIZprqHZFOtN6mF9pBHQ5gAbZIQ1hf79rGUXieJwyP68rG91A5DZiw6lQuOJIepWWypu7DbnMiq7EORoNNpGj6sRFNlMFO+h9419mVbNmj/gE0zl1Owy9KnrojEuAdx51Y1eBlIXppr6FSsZHMzAwo2ATadmMb8OznEbZkhA5juu/IrZabDvx5QCfhrm9WsYWwQFnpUg/WkyGm/7vToDw="
