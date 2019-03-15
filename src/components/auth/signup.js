@@ -33,7 +33,7 @@ export class Signup extends Component {
       <div className="container">
         <div className="row">
           <div className="col-md-6 m-auto">
-            <h4 className="text-center">Sign up to have an account</h4>
+            <h4 className="text-center heading">Sign up to have an account</h4>
             <form onSubmit={this.handleSubmit}>
               <TextInputField
                 name="Username"
@@ -66,7 +66,7 @@ export class Signup extends Component {
             </select>
               <input
                 type="submit"
-                className="btn btn-dark btn-block mt-4"
+                className="btn btn-block mt-4 btn-submit"
                 value="Sign in"
               />
             </form>

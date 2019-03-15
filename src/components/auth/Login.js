@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import TextInputField from "../common/TextInputField";
 import { login } from "./actions/login";
 import PropTypes from "prop-types";
+import './style/style.css'
 
 export class Login extends Component {
   constructor(props) {
@@ -31,9 +32,6 @@ export class Login extends Component {
     if (nextProps.loginerror.data) {
       this.setState({ errors: "Wrong email or password" });
     }
-    // if (nextProps.isAuthenticated) {
-    //   this.props.history.push("/");
-    // }
   }
 
   render() {
@@ -42,7 +40,7 @@ export class Login extends Component {
       <div className="container">
         <div className="row">
           <div className="col-md-6 m-auto">
-            <h2 className="text-center">Welcome to Store Manager</h2>
+            <h2 className="text-center heading">Welcome to Store Manager</h2>
             {errors ? <div className="alert alert-danger">{errors}</div> : ""}
             <form onSubmit={this.onSubmit} id="loginForm">
               <TextInputField
@@ -62,8 +60,8 @@ export class Login extends Component {
                 icon="fas fa-unlock-alt"
                 changed={this.changedHandler}
               />
-              <button type="submit" className="btn btn-dark btn-block mt-4">
-                {loading ? <i className="fas fa-circle-notch spin" /> : "Sign In"}
+              <button type="submit" className="btn btn-block mt-4 btn-submit" >
+                {loading ? <i className="fas fa-circle-notch spin spinner-border spinner-border-sm"/> : "Sign In"}
               </button>
             </form>
           </div>

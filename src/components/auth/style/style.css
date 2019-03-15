@@ -1,0 +1,30 @@
+.btn-submit {
+    border: 0px;
+    color: #fff;
+    text-shadow: 0 1px rgba(0,0,0,0.1); 
+    background-color: #15699E;
+  }
+  
+.btn-submit:hover {
+border: 0px;
+text-shadow: 0 1px rgba(0,0,0,0.3);
+background-color: #3293D1;
+}  
+
+.heading{
+    color: #666666;
+    padding-left: 15px;
+  }
+
+button{
+    background-color:#335a7c;
+    border: none;
+    color: white;
+    padding: 8px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
