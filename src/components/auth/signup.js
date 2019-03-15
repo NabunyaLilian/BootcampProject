@@ -40,7 +40,7 @@ export class Signup extends Component {
                 placeholder="username"
                 type="text"
                 classname="form-control form-control-lg"
-                icon="fas fa-envelope"
+                icon="fas fa-user"
                 changed = {this.changeHandler}
               />
                <TextInputField
@@ -48,7 +48,7 @@ export class Signup extends Component {
                 placeholder="firstname"
                 type="text"
                 classname="form-control form-control-lg"
-                icon="fas fa-envelope"
+                icon="fas fa-user"
                 changed = {this.changeHandler}
               />  
               <TextInputField
@@ -56,7 +56,7 @@ export class Signup extends Component {
                 placeholder="password"
                 type="password"
                 classname="form-control form-control-lg"
-                icon="fas fa-envelope"
+                icon="fas fa-unlock-alt"
                 changed = {this.changeHandler}
               />  
             <select class="custom-select" onChange={this.changeHandler} name="isAdmin">
