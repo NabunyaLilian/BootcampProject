@@ -39,5 +39,5 @@ export const signup = ( Username, Password,FirstName, isAdmin) => (dispatch) => 
     .then((response) => {
       dispatch(signupsuccess(response.data));
     })
-    .catch(error => dispatch(signupfail(error.response.data.error)));
+    .catch(error => dispatch(signupfail(error.response)));
 };
